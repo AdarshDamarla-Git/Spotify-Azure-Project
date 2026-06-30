@@ -26,6 +26,8 @@
 						{
 							"name": "AzureSQLToLake",
 							"type": "Copy",
+							"state": "Inactive",
+							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [
 								{
 									"activity": "last_cdc",
@@ -104,6 +106,8 @@
 						{
 							"name": "last_cdc",
 							"type": "Lookup",
+							"state": "Inactive",
+							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [],
 							"policy": {
 								"timeout": "0.12:00:00",
@@ -143,6 +147,8 @@
 						{
 							"name": "current",
 							"type": "SetVariable",
+							"state": "Inactive",
+							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [],
 							"policy": {
 								"secureOutput": false,
@@ -160,6 +166,8 @@
 						{
 							"name": "IfIncremental_Data",
 							"type": "IfCondition",
+							"state": "Inactive",
+							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [
 								{
 									"activity": "AzureSQLToLake",
@@ -178,6 +186,8 @@
 									{
 										"name": "DeleteEmptyFile",
 										"type": "Delete",
+										"state": "Inactive",
+										"onInactiveMarkAs": "Succeeded",
 										"dependsOn": [],
 										"policy": {
 											"timeout": "0.12:00:00",
@@ -213,6 +223,8 @@
 									{
 										"name": "update_last_cdc",
 										"type": "Copy",
+										"state": "Inactive",
+										"onInactiveMarkAs": "Succeeded",
 										"dependsOn": [
 											{
 												"activity": "max_cdc",
@@ -287,6 +299,8 @@
 									{
 										"name": "max_cdc",
 										"type": "Script",
+										"state": "Inactive",
+										"onInactiveMarkAs": "Succeeded",
 										"dependsOn": [],
 										"policy": {
 											"timeout": "0.12:00:00",
@@ -330,7 +344,24 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "JsonSourceLoopInput",
+						"type": "DatasetReference"
+					}
+				}
 			},
 			{
 				"name": "Lookup_loop_input",
