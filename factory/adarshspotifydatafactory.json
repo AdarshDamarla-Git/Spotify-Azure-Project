@@ -1,0 +1,15 @@
+{
+	"name": "adarshspotifydatafactory",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ecb45052-3264-43b2-bb4b-752dd3a3c7c8",
+		"tenantId": "ba5ca864-8310-46d2-9ecb-8200f1c175e0"
+	}
+}
