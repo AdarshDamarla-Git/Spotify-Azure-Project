@@ -169,7 +169,8 @@
 										"folder": {
 											"value": "@pipeline().parameters.table",
 											"type": "Expression"
-										}
+										},
+										"file": "@concat(pipeline().parameters.table,'_',variables('current'))"
 									}
 								},
 								"enableLogging": true,
