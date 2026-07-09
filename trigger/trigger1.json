@@ -14,9 +14,10 @@
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Minute",
-				"interval": 15,
-				"startTime": "2026-07-09T01:12:00",
+				"frequency": "Hour",
+				"interval": 10,
+				"startTime": "2026-07-08T08:16:00",
+				"endTime": "2026-07-10T01:13:30",
 				"timeZone": "Central Standard Time"
 			}
 		}
