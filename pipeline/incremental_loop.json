@@ -328,6 +328,7 @@
 			},
 			{
 				"name": "Lookup_loop_input",
+				"description": "Lookup to pass the files",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
