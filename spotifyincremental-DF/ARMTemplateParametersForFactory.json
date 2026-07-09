@@ -8,9 +8,6 @@
 		"AzureDataLake_accountKey": {
 			"value": ""
 		},
-		"AzureDatabricks_accessToken": {
-			"value": ""
-		},
 		"AzureSqlDatabase_password": {
 			"value": ""
 		},

@@ -11,10 +11,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLake'"
 		},
-		"AzureDatabricks_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks'"
-		},
 		"AzureSqlDatabase_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase'"
@@ -977,10 +973,8 @@
 				"type": "AzureDatabricks",
 				"typeProperties": {
 					"domain": "https://adb-7405614744543034.14.azuredatabricks.net",
-					"accessToken": {
-						"type": "SecureString",
-						"value": "[parameters('AzureDatabricks_accessToken')]"
-					},
+					"authentication": "MSI",
+					"workspaceResourceId": "/subscriptions/177e2845-e78f-4f75-9788-24a7f99c3aa7/resourceGroups/RG-IncrementalLoad/providers/Microsoft.Databricks/workspaces/spotifydatabricks",
 					"newClusterNodeType": "Standard_DS3_v2",
 					"newClusterNumOfWorker": "2",
 					"newClusterSparkEnvVars": {

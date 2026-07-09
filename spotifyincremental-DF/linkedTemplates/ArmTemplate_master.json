@@ -11,10 +11,6 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLake'"
 		},
-		"AzureDatabricks_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks'"
-		},
 		"AzureSqlDatabase_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabase'"
@@ -64,9 +60,6 @@
 					},
 					"AzureDataLake_accountKey": {
 						"value": "[parameters('AzureDataLake_accountKey')]"
-					},
-					"AzureDatabricks_accessToken": {
-						"value": "[parameters('AzureDatabricks_accessToken')]"
 					},
 					"AzureSqlDatabase_password": {
 						"value": "[parameters('AzureSqlDatabase_password')]"
