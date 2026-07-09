@@ -1,0 +1,25 @@
+{
+	"name": "Trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "incremental_loop",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 2,
+				"startTime": "2026-07-08T01:44:00",
+				"endTime": "2026-07-09T02:39:00",
+				"timeZone": "Central Standard Time"
+			}
+		}
+	}
+}
