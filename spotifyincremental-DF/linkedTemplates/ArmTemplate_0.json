@@ -1010,7 +1010,7 @@
 			]
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/Trigger1')]",
+			"name": "[concat(parameters('factoryName'), '/Trigger')]",
 			"type": "Microsoft.DataFactory/factories/triggers",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -1030,8 +1030,8 @@
 					"recurrence": {
 						"frequency": "Hour",
 						"interval": 2,
-						"startTime": "2026-07-08T01:44:00",
-						"endTime": "2026-07-09T02:39:00",
+						"startTime": "2026-07-10T17:40:00",
+						"endTime": "2026-07-10T22:34:00",
 						"timeZone": "Central Standard Time"
 					}
 				}
