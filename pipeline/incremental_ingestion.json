@@ -82,6 +82,7 @@
 			},
 			{
 				"name": "last_cdc",
+				"description": "Lookup for last_cdc",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {

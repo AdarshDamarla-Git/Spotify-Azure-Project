@@ -3,21 +3,14 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [
-			{
-				"pipelineReference": {
-					"referenceName": "incremental_loop",
-					"type": "PipelineReference"
-				}
-			}
-		],
+		"pipelines": [],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Minute",
-				"interval": 15,
+				"frequency": "Hour",
+				"interval": 2,
 				"startTime": "2026-07-10T17:00:00",
-				"endTime": "2026-07-10T21:55:00",
+				"endTime": "2026-07-10T21:53:00",
 				"timeZone": "Central Standard Time"
 			}
 		}

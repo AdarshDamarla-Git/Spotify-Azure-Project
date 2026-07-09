@@ -1,0 +1,15 @@
+{
+	"name": "spotifyincremental-DF",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "15579643-77fa-490e-9570-653f3fe9446b",
+		"tenantId": "ba5ca864-8310-46d2-9ecb-8200f1c175e0"
+	}
+}
